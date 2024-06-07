@@ -215,6 +215,7 @@ describe("nft-lend-borrow", () => {
             .signers([lender])
             .rpc();
 
+
         const vaultAccount = await provider.connection.getAccountInfo(vaultPDA);
         const lenderAccount = await provider.connection.getAccountInfo(
             lender.publicKey
@@ -260,6 +261,7 @@ describe("nft-lend-borrow", () => {
                 program.programId
             );
 
+            
         activeLoanPDA = activeloan;
 
         let [vaultAsset, _vaultAssetBump] =
